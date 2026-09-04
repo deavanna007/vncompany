@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - VN COMPANY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleHome.css">
+
+    <style>
+        /* Extra styles specifically for About Us section */
+        .about-hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-hero h1 {
+            font-family: var(--font-tech);
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .about-hero h1 span {
+            color: var(--accent-orange);
+        }
+
+        .about-hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+        }
+
+        .stat-card .number {
+            font-family: var(--font-tech);
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            margin-bottom: 5px;
+        }
+
+        .stat-card .label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .features-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-box {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-orange);
+        }
+
+        .feature-box h3 {
+            font-family: var(--font-tech);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="image/vn_company_logo.svg" alt="VN COMPANY Logo" style="width: 50px; height: auto; border-radius: 50%; object-fit: contain;">
+                <span style="color: #0099ff; font-weight: bold; font-size: 1.5rem; line-height: 1;">VN <span style="color: #004a58;">COMPANY</span></span>
+            </a>
+        </div>
+
+        <!-- Desktop Search -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search for games (e.g., Roblox)...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+
+        <div class="nav-actions">
+            <i class="fa-solid fa-magnifying-glass mobile-search-trigger" id="mobileSearchBtn" style="display:none;"></i>
+            <div class="hamburger" id="hamburgerBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#games">All Games</a>
+        <a href="https://t.me/vncompany1">Channel Telegram</a>
+        <a href="https://t.me/deavanna1">Support</a>
+    </div>
+
+    <main style="margin-top: 70px;">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1>About <span>VN COMPANY</span></h1>
+            <p>
+                Welcome to <strong>VN COMPANY</strong> — Cambodia's premier destination for fast, safe, and reliable gaming top-ups. We provide seamless in-game currency recharges for popular games like Roblox, Zepeto, Free Fire, Mobile Legends, and many more.
+            </p>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <i class="fa-solid fa-users"></i>
+                <div class="number">10,000+</div>
+                <div class="label">Happy Gamers</div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-bolt"></i>
+                <div class="number">&lt; 3 Mins</div>
+                <div class="label">Average Delivery</div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="number">100%</div>
+                <div class="label">Secure Top-Up</div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-headset"></i>
+                <div class="number">24/7</div>
+                <div class="label">Customer Support</div>
+            </div>
+        </section>
+
+        <!-- Mission & Values -->
+        <section class="features-section">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Us?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3><i class="fa-solid fa-rocket" style="color: var(--accent-orange); margin-right: 10px;"></i> Instant Delivery</h3>
+                    <p>We process all top-up requests instantly using automated and direct top-up gateways so you never miss a minute of gameplay.</p>
+                </div>
+                <div class="feature-box">
+                    <h3><i class="fa-solid fa-wallet" style="color: var(--accent-blue); margin-right: 10px;"></i> Local Payments</h3>
+                    <p>Easily pay using Cambodian local payment methods like ABA Bank, Wing, and ACLEDA with maximum security and convenience.</p>
+                </div>
+                <div class="feature-box">
+                    <h3><i class="fa-solid fa-lock" style="color: var(--accent-orange); margin-right: 10px;"></i> Safe & Authorized</h3>
+                    <p>All recharges are processed through official channels, keeping your gaming accounts 100% safe from bans or restrictions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <i class="fa-solid fa-gamepad" style="color: var(--accent-orange);"></i>
+                    VN <span>COMPANY</span>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    Your #1 trusted destination for game top-ups. Secure, fast, and reliable service for gamers in Cambodia and beyond.
+                </p>
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="https://facebook.com/deavanna1" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://t.me/deavanna1" class="social-btn"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://tiktok.com/@ismee_v1" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="how-to-top-up.html">How to Top Up</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="contact-support.html">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Payment Methods</h3>
+                <div class="payment-methods">
+                    <div class="payment-icon pay-aba">ABA Bank</div>
+                    <div class="payment-icon pay-wing">Wing</div>
+                    <div class="payment-icon pay-acleda">ACLEDA</div>
+                    <div class="payment-icon"><i class="fa-brands fa-cc-visa"></i> Visa</div>
+                    <div class="payment-icon"><i class="fa-brands fa-cc-mastercard"></i> MC</div>
+                </div>
+                <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.85rem;">
+                    We support local Khmer payment gateways for your convenience.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 VN COMPANY. All Rights Reserved. Designed with precision.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburgerBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                const icon = hamburgerBtn.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

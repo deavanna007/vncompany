@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VN COMPANY - Gaming Top-Up Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="image/vn_company_logo.svg" alt="VN COMPANY Logo" style="width: 50px; height: auto; border-radius: 50%; object-fit: contain;">
+                <span style="color: #0099ff; font-weight: bold; font-size: 1.5rem; line-height: 1;">VN <span style="color: #004a58;">COMPANY</span></span>
+            </a>
+        </div>
+
+        <!-- Desktop Search -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search for games (e.g., Roblox)...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+
+        <div class="nav-actions">
+            <i class="fa-solid fa-magnifying-glass mobile-search-trigger" id="mobileSearchBtn" style="display:none;"></i>
+            <div class="hamburger" id="hamburgerBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div style="margin-bottom: 20px; display: block;">
+            <input type="text" id="mobileSearchInput" class="search-input" placeholder="Search games...">
+        </div>
+        <a href="#" class="active">Home</a>
+        <a href="#games">All Games</a>
+        <a href="https://t.me/vncompany1">Channel Telegram</a>
+        <a href="https://t.me/deavanna1">Support</a>
+    </div>
+
+    <main>
+        <!-- 3D Poster Slider Section (ដូចក្នុងរូបភាព) -->
+        <section class="hero-carousel-container" id="hero">
+            <div class="carousel-track-wrapper" id="carouselTrack">
+                <div class="carousel-slide" style="background-image: url('/image/banner_img_vn.svg');"></div>
+                <div class="carousel-slide" style="background-image: url('/image/banner2_img_vn.jpg');"></div>
+                <div class="carousel-slide" style="background-image: url('/image/Zepeto-newBanner_vn.png');"></div>
+            </div>
+
+            <!-- ប៊ូតុងរំកិលឆ្វេង-ស្តាំ -->
+            <button class="carousel-nav-btn prev-btn" id="prevSlideBtn" aria-label="Previous Slide">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-nav-btn next-btn" id="nextSlideBtn" aria-label="Next Slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </section>
+
+        <!-- Game Grid Section -->
+        <section class="games-section" id="games">
+            <div class="section-header">
+                <h2 class="section-title">All Games</h2>
+            </div>
+
+            <div class="games-grid" id="gamesGrid">
+                
+                <!-- Card 1 -->
+                <a href="roblox.html" style="text-decoration: none;">
+                    <div class="game-card" data-title="Roblox">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">-05% Off</span>
+                            <img src="image/logo_roblox_vn.png" alt="Roblox" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">ROBLOX</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="zepeto.html" style="text-decoration: none;">
+                    <div class="game-card" data-title="ZEPETO">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">-10% Off</span>
+                            <img src="image/logo_zepeto_vn.png" alt="Zepeto" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">ZEPETO</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="Free Fire">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_free-fire_vn.png" alt="Free Fire" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">FREE FIRE</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="THE SPIKE CROSS">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_the-spike_vn.png" alt="THE SPIKE CROSS" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">THE SPIKE CROSS</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 5 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="MAGIC CHESS GO GO">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_magicchessgg_vn.png" alt="MAGIC CHESS GO GO" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">MAGIC CHESS GO GO</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 6 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="HOK">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_hokgame_vn.png" alt="HOK" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">HONOR OF KING</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 7 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="8 BALL POOL">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_8-ball-pool_vn.png" alt="8 BALL POOL" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">8 BALL POOL</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 8 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="MOBILE LEGENDS">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_ml-bb_vn.png" alt="Mobile Legends" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">MOBILE LEGENDS</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 9 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="BLOOD STRIKE">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_blood-strike_vn.png" alt="BLOOD STRIKE" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">BLOOD STRIKE</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 10 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="Steam Wallet">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_steam-wallet_vn.png" alt="Steam Wallet" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">STEAM WALLET</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 11 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="NetEase">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_net-ease_vn.png" alt="NetEase" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">NETEASE</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 12 -->
+                <a href="https://t.me/deavanna1" style="text-decoration: none;">
+                    <div class="game-card" data-title="Lords Mobile">
+                        <div class="card-img-wrapper">
+                            <span class="discount-badge">Coming Soon</span>
+                            <img src="image/logo_lords-mobile_vn.png" alt="Lords Mobile" class="card-img">
+                        </div>
+                        <div class="card-info">
+                            <span class="game-title">LORDS MOBILE</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <i class="fa-solid fa-gamepad" style="color: var(--accent-orange);"></i>
+                    VN <span>COMPANY</span>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    Your #1 trusted destination for game top-ups. Secure, fast, and reliable service for gamers in Cambodia and beyond.
+                </p>
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="https://facebook.com/deavanna1" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://t.me/deavanna1" class="social-btn"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://tiktok.com/@ismee_v1" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="how-to-top-up.html">How to Top Up</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="contact-support.html">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Payment Methods</h3>
+                <div class="payment-methods">
+                    <div class="payment-icon pay-aba">ABA Bank</div>
+                    <div class="payment-icon pay-wing">Wing</div>
+                    <div class="payment-icon pay-acleda">ACLEDA</div>
+                    <div class="payment-icon"><i class="fa-brands fa-cc-visa"></i> Visa</div>
+                    <div class="payment-icon"><i class="fa-brands fa-cc-mastercard"></i> MC</div>
+                </div>
+                <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.85rem;">
+                    We support local Khmer payment gateways for your convenience.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 VN COMPANY. All Rights Reserved. Designed with precision.
+        </div>
+    </footer>
+
+    <!-- Toast Notification Element -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-orange);"></i>
+        <span id="toastMsg">Notification</span>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            /* --- Mobile Menu Toggle --- */
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburgerBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                const icon = hamburgerBtn.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            /* --- 3D Carousel Slider Logic (5 វិនាទីផ្លាស់ប្ដូរម្ដង) --- */
+            const carouselSlides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.getElementById('prevSlideBtn');
+            const nextBtn = document.getElementById('nextSlideBtn');
+            let currentIndex = 0;
+            const autoSlideInterval = 5000; // 5 វិនាទី
+
+            function updateCarousel() {
+                const total = carouselSlides.length;
+                carouselSlides.forEach((slide, i) => {
+                    slide.classList.remove('active', 'prev', 'next');
+                    
+                    if (i === currentIndex) {
+                        slide.classList.add('active');
+                    } else if (i === (currentIndex - 1 + total) % total) {
+                        slide.classList.add('prev');
+                    } else if (i === (currentIndex + 1) % total) {
+                        slide.classList.add('next');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % carouselSlides.length;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + carouselSlides.length) % carouselSlides.length;
+                updateCarousel();
+            }
+
+            // Click Events
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Auto Switch (3s)
+            let slideTimer = setInterval(nextSlide, autoSlideInterval);
+
+            // Pause on Hover
+            const carouselContainer = document.getElementById('hero');
+            carouselContainer.addEventListener('mouseenter', () => clearInterval(slideTimer));
+            carouselContainer.addEventListener('mouseleave', () => {
+                clearInterval(slideTimer);
+                slideTimer = setInterval(nextSlide, autoSlideInterval);
+            });
+
+            // Initial render
+            updateCarousel();
+
+            /* --- Search Functionality --- */
+            const searchInput = document.getElementById('searchInput');
+            const mobileSearchInput = document.getElementById('mobileSearchInput');
+            const gameCards = document.querySelectorAll('.game-card');
+
+            function filterGames(query) {
+                const lowerQuery = query.toLowerCase();
+                let foundCount = 0;
+
+                gameCards.forEach(card => {
+                    const title = card.getAttribute('data-title').toLowerCase();
+                    if (title.includes(lowerQuery)) {
+                        card.style.display = 'flex';
+                        foundCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (foundCount === 0 && query !== '') {
+                    showToast(`No games found for "${query}"`);
+                }
+            }
+
+            if(searchInput) {
+                searchInput.addEventListener('input', (e) => filterGames(e.target.value));
+            }
+
+            if(mobileSearchInput) {
+                mobileSearchInput.addEventListener('input', (e) => {
+                    filterGames(e.target.value);
+                    if(window.scrollY < 400) {
+                        document.getElementById('games').scrollIntoView({behavior: 'smooth'});
+                    }
+                });
+            }
+
+            /* --- Toast Notification Utility --- */
+            window.showToast = function(message) {
+                const toast = document.getElementById('toast');
+                const msgSpan = document.getElementById('toastMsg');
+                
+                msgSpan.textContent = message;
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

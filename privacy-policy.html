@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - VN COMPANY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleHome.css">
+
+    <style>
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-tech);
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .page-header h1 span {
+            color: var(--accent-orange);
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 20px auto 60px;
+            padding: 0 20px;
+        }
+
+        .privacy-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 40px;
+            color: var(--text-main);
+        }
+
+        .privacy-section {
+            margin-bottom: 30px;
+        }
+
+        .privacy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-section h2 {
+            font-family: var(--font-tech);
+            font-size: 1.25rem;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .privacy-section p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .privacy-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .privacy-section ul li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .privacy-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="image/vn_company_logo.svg" alt="VN COMPANY Logo" style="width: 50px; height: auto; border-radius: 50%; object-fit: contain;">
+                <span style="color: #0099ff; font-weight: bold; font-size: 1.5rem; line-height: 1;">VN <span style="color: #004a58;">COMPANY</span></span>
+            </a>
+        </div>
+
+        <!-- Desktop Search -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search for games (e.g., Roblox)...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+
+        <div class="nav-actions">
+            <i class="fa-solid fa-magnifying-glass mobile-search-trigger" id="mobileSearchBtn" style="display:none;"></i>
+            <div class="hamburger" id="hamburgerBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#games">All Games</a>
+        <a href="https://t.me/vncompany1">Channel Telegram</a>
+        <a href="https://t.me/deavanna1">Support</a>
+    </div>
+
+    <main style="margin-top: 70px;">
+        <!-- Header -->
+        <section class="page-header">
+            <h1>Privacy <span>Policy</span></h1>
+            <p>Last updated: September 2026. How we collect, protect, and use your information.</p>
+        </section>
+
+        <!-- Privacy Content Card -->
+        <section class="privacy-container">
+            <div class="privacy-card">
+                
+                <div class="privacy-section">
+                    <h2><i class="fa-solid fa-user-shield" style="color: var(--accent-orange);"></i> 1. Information We Collect</h2>
+                    <p>When you place an order on <strong>VN COMPANY</strong>, we collect basic details necessary to process your top-up request accurately:</p>
+                    <ul>
+                        <li><strong>Game Information:</strong> Game User ID, Zone ID, Character Name, or Server choice.</li>
+                        <li><strong>Contact Information:</strong> Telegram handle, email address, or phone number (for order tracking and customer service).</li>
+                        <li><strong>Transaction Records:</strong> Payment receipts, transaction reference numbers, and payment status verification.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2><i class="fa-solid fa-gears" style="color: var(--accent-orange);"></i> 2. How We Use Your Data</h2>
+                    <p>We use your information exclusively to ensure fast, secure, and accurate service delivery:</p>
+                    <ul>
+                        <li>To process and fulfill game currency or item top-ups directly to your game account.</li>
+                        <li>To contact you on Telegram or email if an error occurs during order processing.</li>
+                        <li>To verify local payment transactions and prevent illegal or fraudulent activities.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2><i class="fa-solid fa-lock" style="color: var(--accent-orange);"></i> 3. Data Protection & Security</h2>
+                    <p>Your privacy and account safety are top priorities. We implement robust measures to protect your information:</p>
+                    <ul>
+                        <li>We <strong>never</strong> ask for or store your personal game passwords.</li>
+                        <li>All payment data is handled securely through encrypted local banking channels (such as ABA Bank, Wing, ACLEDA, and KHQR).</li>
+                        <li>We never sell, rent, or trade your personal information to third parties.</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2><i class="fa-solid fa-cookie-bite" style="color: var(--accent-orange);"></i> 4. Cookies & Local Storage</h2>
+                    <p>We use minimal browser cookies or local storage solely to remember your site preferences, active sessions, and shopping cart selections to enhance your browsing experience.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2><i class="fa-solid fa-headset" style="color: var(--accent-orange);"></i> 5. Contacting Support</h2>
+                    <p>If you have any questions or concerns regarding our privacy practices, or if you wish to request data deletion, please contact us directly via our official Telegram support:</p>
+                    <ul>
+                        <li><strong>Telegram Support:</strong> <a href="https://t.me/deavanna1" style="color: var(--accent-blue);">Dea Vanna</a></li>
+                        <li><strong>Telegram Channel:</strong> <a href="https://t.me/vncompany1" style="color: var(--accent-blue);">VN Company Channel</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <i class="fa-solid fa-gamepad" style="color: var(--accent-orange);"></i>
+                    VN <span>COMPANY</span>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    Your #1 trusted destination for game top-ups. Secure, fast, and reliable service for gamers in Cambodia and beyond.
+                </p>
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="https://facebook.com/deavanna1" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://t.me/deavanna1" class="social-btn"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://tiktok.com/@ismee_v1" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="how-to-top-up.html">How to Top Up</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="contact-support.html">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Payment Methods</h3>
+                <div class="payment-methods">
+                    <div class="payment-icon pay-aba">ABA Bank</div>
+                    <div class="payment-icon pay-wing">Wing</div>
+                    <div class="payment-icon pay-acleda">ACLEDA</div>
+                    <div class="payment-icon"><i class="fa-brands fa-cc-visa"></i> Visa</div>
+                    <div class="payment-icon"><i class="fa-brands fa-cc-mastercard"></i> MC</div>
+                </div>
+                <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.85rem;">
+                    We support local Khmer payment gateways for your convenience.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 VN COMPANY. All Rights Reserved. Designed with precision.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburgerBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                const icon = hamburgerBtn.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Top Up - VN COMPANY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styleHome.css">
+
+    <style>
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            font-family: var(--font-tech);
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .page-header h1 span {
+            color: var(--accent-orange);
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Step Timeline Styling */
+        .steps-container {
+            max-width: 1000px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .step-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 30px 20px;
+            position: relative;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 136, 255, 0.15);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-orange);
+            color: white;
+            font-family: var(--font-tech);
+            font-weight: bold;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--bg-color);
+        }
+
+        .step-icon {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin: 15px 0;
+        }
+
+        .step-card h3 {
+            font-family: var(--font-tech);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-family: var(--font-tech);
+            font-size: 1rem;
+            color: var(--text-main);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #222;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-top: 1px solid #333;
+        }
+
+        /* Telegram Support Box */
+        .support-cta {
+            background: linear-gradient(135deg, #0088cc 0%, #005580 100%);
+            border-radius: 12px;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .support-cta h2 {
+            font-family: var(--font-tech);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .support-cta p {
+            margin-bottom: 25px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #0088cc;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-family: var(--font-tech);
+            font-weight: bold;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="image/vn_company_logo.svg" alt="VN COMPANY Logo" style="width: 50px; height: auto; border-radius: 50%; object-fit: contain;">
+                <span style="color: #0099ff; font-weight: bold; font-size: 1.5rem; line-height: 1;">VN <span style="color: #004a58;">COMPANY</span></span>
+            </a>
+        </div>
+
+        <!-- Desktop Search -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search for games (e.g., Roblox)...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+
+        <div class="nav-actions">
+            <i class="fa-solid fa-magnifying-glass mobile-search-trigger" id="mobileSearchBtn" style="display:none;"></i>
+            <div class="hamburger" id="hamburgerBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#games">All Games</a>
+        <a href="https://t.me/vncompany1">Channel Telegram</a>
+        <a href="https://t.me/deavanna1">Support</a>
+    </div>
+
+    <main style="margin-top: 70px;">
+        <!-- Header -->
+        <section class="page-header">
+            <h1>How to <span>Top Up</span></h1>
+            <p>Follow these 4 simple steps to recharge your game currency in minutes.</p>
+        </section>
+
+        <!-- Step-by-Step Cards -->
+        <section class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-icon"><i class="fa-solid fa-gamepad"></i></div>
+                <h3>Select Game</h3>
+                <p>Choose your desired game from our store list on the home page.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-icon"><i class="fa-solid fa-user-gear"></i></div>
+                <h3>Enter Account Info</h3>
+                <p>Provide your User ID / Account details accurately in the required fields.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-icon"><i class="fa-solid fa-qrcode"></i></div>
+                <h3>Make Payment</h3>
+                <p>Select your preferred local payment method (ABA, Wing, ACLEDA) and complete payment.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3>Receive Top-Up</h3>
+                <p>Your game items or currency will be delivered to your account within 1-5 minutes!</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-clock" style="color: var(--accent-orange); margin-right: 10px;"></i> How long does top-up take?</span>
+                </div>
+                <div class="faq-answer">
+                    Most recharges are completed automatically within 1 to 5 minutes after payment verification.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-circle-exclamation" style="color: var(--accent-orange); margin-right: 10px;"></i> What if I entered the wrong User ID?</span>
+                </div>
+                <div class="faq-answer">
+                    Please contact our support team on Telegram immediately with your payment receipt before the system processes your order.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-credit-card" style="color: var(--accent-orange); margin-right: 10px;"></i> Which payment options are accepted?</span>
+                </div>
+                <div class="faq-answer">
+                    We support local Cambodian banks including ABA Bank, Wing Money, ACLEDA Bank, and KHQR payments.
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Support Box -->
+        <section class="support-cta">
+            <h2>Need Extra Help?</h2>
+            <p>Our customer support team is available on Telegram to guide you step-by-step.</p>
+            <a href="https://t.me/deavanna1" class="cta-btn" target="_blank">
+                <i class="fa-brands fa-telegram"></i> Contact Telegram Support
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <i class="fa-solid fa-gamepad" style="color: var(--accent-orange);"></i>
+                    VN <span>COMPANY</span>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    Your #1 trusted destination for game top-ups. Secure, fast, and reliable service for gamers in Cambodia and beyond.
+                </p>
+                <div class="social-icons" style="margin-top: 20px;">
+                    <a href="https://facebook.com/deavanna1" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://t.me/deavanna1" class="social-btn"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://tiktok.com/@ismee_v1" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="how-to-top-up.html">How to Top Up</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="contact-support.html">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Payment Methods</h3>
+                <div class="payment-methods">
+                    <div class="payment-icon pay-aba">ABA Bank</div>
+                    <div class="payment-icon pay-wing">Wing</div>
+                    <div class="payment-icon pay-acleda">ACLEDA</div>
+                    <div class="payment-icon"><i class="fa-brands fa-cc-visa"></i> Visa</div>
+                    <div class="payment-icon"><i class="fa-brands fa-cc-mastercard"></i> MC</div>
+                </div>
+                <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.85rem;">
+                    We support local Khmer payment gateways for your convenience.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 VN COMPANY. All Rights Reserved. Designed with precision.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburgerBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                const icon = hamburgerBtn.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
