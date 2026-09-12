@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vncompany-puce.vercel.app/</loc>
+    <loc>https://vncompany.store/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://vncompany-puce.vercel.app/about.html</loc>
+    <loc>https://vncompany.store/about.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://vncompany-puce.vercel.app/contact-support.html</loc>
+    <loc>https://vncompany.store/contact-support.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://vncompany-puce.vercel.app/how-to-top-up.html</loc>
+    <loc>https://vncompany.store/how-to-top-up.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://vncompany-puce.vercel.app/privacy-policy.html</loc>
+    <loc>https://vncompany.store/privacy-policy.html</loc>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://vncompany-puce.vercel.app/roblox.html</loc>
+    <loc>https://vncompany.store/roblox.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://vncompany-puce.vercel.app/terms-of-service.html</loc>
+    <loc>https://vncompany.store/terms-of-service.html</loc>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://vncompany-puce.vercel.app/zepeto.html</loc>
+    <loc>https://vncompany.store/zepeto.html</loc>
     <priority>0.80</priority>
   </url>
 </urlset>
