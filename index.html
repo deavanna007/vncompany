@@ -3,28 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VN COMPANY - Games Top-Up Store</title>
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="google622d951849f6d8c3" />
-    <meta name="keywords" content="VN COMPANY, Robux Cambodia, Top Up Robux, លក់ Robux, Robux cheap price, zepeto topup, zem zepeto, zepeto cambodia">
-    <meta name="author" content="deavanna">
-    <meta name="description" content="Buy game credits instantly with secure payment and best prices." />
-    <!-- Open Graph / Facebook / Telegram -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.vncompany.store/" />
-    <meta property="og:title" content="VN COMPANY | Top-Up Games" />
-    <meta property="og:description" content="Buy game credits instantly with secure payment and best prices." />
-    <meta property="og:image" content="https://i.postimg.cc/FK6QsGzw/Gemini-Generated-Image-t99qx1t99qx1t99q.png" />
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.vncompany.store/" />
-    <meta property="twitter:title" content="VN COMPANY | Top-Up Games" />
-    <meta property="twitter:description" content="Buy game credits instantly with secure payment and best prices." />
-    <meta property="twitter:image" content="https://i.postimg.cc/FK6QsGzw/Gemini-Generated-Image-t99qx1t99qx1t99q.png" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="image/vn_company_logo.svg">
-    <meta name="description" content="Buy game credits instantly with secure payment and best prices.">
+    <title>VN COMPANY - Gaming Top-Up Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
@@ -37,9 +16,9 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <a href="index.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
-                <img src="image/vn_company_logo.svg" alt="VN COMPANY Logo" style="width: 50px; height: auto; border-radius: 50%; object-fit: contain;">
-                <span style="color: #0099ff; font-weight: bold; font-size: 1.5rem; line-height: 1;">VN <span style="color: #004a58;">COMPANY</span></span>
+            <a href="index.html" class="brand-link">
+                <img src="image/vn_company_logo.svg" alt="VN COMPANY Logo" class="brand-logo-img">
+                <span class="brand-text">VN <span class="brand-subtext">COMPANY</span></span>
             </a>
         </div>
 
@@ -50,7 +29,7 @@
         </div>
 
         <div class="nav-actions">
-            <i class="fa-solid fa-magnifying-glass mobile-search-trigger" id="mobileSearchBtn" style="display:none;"></i>
+            <i class="fa-solid fa-magnifying-glass mobile-search-trigger" id="mobileSearchBtn"></i>
             <div class="hamburger" id="hamburgerBtn">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -69,12 +48,12 @@
     </div>
 
     <main>
-        <!-- 3D Poster Slider Section (ដូចក្នុងរូបភាព) -->
+        <!-- 3D Poster Slider Section -->
         <section class="hero-carousel-container" id="hero">
             <div class="carousel-track-wrapper" id="carouselTrack">
-                <div class="carousel-slide" style="background-image: url('/image/banner_img_vn.svg');"></div>
-                <div class="carousel-slide" style="background-image: url('/image/banner2_img_vn.jpg');"></div>
-                <div class="carousel-slide" style="background-image: url('/image/Zepeto-newBanner_vn.png');"></div>
+                <div class="carousel-slide" style="background-image: url('image/banner_img_vn.svg');"></div>
+                <div class="carousel-slide" style="background-image: url('image/banner2_img_vn.jpg');"></div>
+                <div class="carousel-slide" style="background-image: url('image/Zepeto-newBanner_vn.png');"></div>
             </div>
 
             <!-- ប៊ូតុងរំកិលឆ្វេង-ស្តាំ -->
@@ -254,13 +233,15 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (បានកែសម្រួល Logo និង Name ឱ្យដូច Header) -->
     <footer>
         <div class="footer-content">
             <div class="footer-col">
                 <div class="logo" style="margin-bottom: 20px;">
-                    <i class="fa-solid fa-gamepad" style="color: var(--accent-orange);"></i>
-                    VN <span>COMPANY</span>
+                    <a href="index.html" class="brand-link">
+                        <img src="image/vn_company_logo.svg" alt="VN COMPANY Logo" class="brand-logo-img">
+                        <span class="brand-text">VN <span class="brand-subtext">COMPANY</span></span>
+                    </a>
                 </div>
                 <p style="color: var(--text-muted); font-size: 0.9rem;">
                     Your #1 trusted destination for game top-ups. Secure, fast, and reliable service for gamers in Cambodia and beyond.
@@ -328,12 +309,12 @@
                 }
             });
 
-            /* --- 3D Carousel Slider Logic (5 វិនាទីផ្លាស់ប្ដូរម្ដង) --- */
+            /* --- 3D Carousel Slider Logic --- */
             const carouselSlides = document.querySelectorAll('.carousel-slide');
             const prevBtn = document.getElementById('prevSlideBtn');
             const nextBtn = document.getElementById('nextSlideBtn');
             let currentIndex = 0;
-            const autoSlideInterval = 5000; // 5 វិនាទី
+            const autoSlideInterval = 5000;
 
             function updateCarousel() {
                 const total = carouselSlides.length;
@@ -360,14 +341,11 @@
                 updateCarousel();
             }
 
-            // Click Events
             nextBtn.addEventListener('click', nextSlide);
             prevBtn.addEventListener('click', prevSlide);
 
-            // Auto Switch (3s)
             let slideTimer = setInterval(nextSlide, autoSlideInterval);
 
-            // Pause on Hover
             const carouselContainer = document.getElementById('hero');
             carouselContainer.addEventListener('mouseenter', () => clearInterval(slideTimer));
             carouselContainer.addEventListener('mouseleave', () => {
@@ -375,7 +353,6 @@
                 slideTimer = setInterval(nextSlide, autoSlideInterval);
             });
 
-            // Initial render
             updateCarousel();
 
             /* --- Search Functionality --- */
