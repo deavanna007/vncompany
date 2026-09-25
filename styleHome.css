@@ -3,7 +3,7 @@
     --card-bg: #1a1a1a;
     --header-bg: rgba(17, 17, 17, 0.95);
     --accent-orange: #ff6b00;
-    --accent-blue: #0088ff; /* ពណ៌ខៀវដូចប៊ូតុងក្នុងរូប */
+    --accent-blue: #0088ff;
     --text-main: #ffffff;
     --text-muted: #b0b0b0;
     --font-tech: 'Orbitron', sans-serif;
@@ -42,6 +42,33 @@ ul { list-style: none; }
     background: var(--accent-orange);
 }
 
+/* --- Shared Logo Style --- */
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.brand-logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.brand-text {
+    color: #0099ff;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-family: var(--font-tech);
+}
+
+.brand-subtext {
+    color: #004a58;
+}
+
 /* --- Header --- */
 header {
     position: fixed;
@@ -61,19 +88,8 @@ header {
 }
 
 .logo {
-    font-family: var(--font-tech);
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: var(--text-main);
-    text-transform: uppercase;
-    letter-spacing: 2px;
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.logo span {
-    color: var(--accent-orange);
 }
 
 .search-container {
@@ -119,7 +135,12 @@ header {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+}
+
+.mobile-search-trigger {
+    display: none;
+    cursor: pointer;
 }
 
 .hamburger {
@@ -154,8 +175,8 @@ header {
 
 .mobile-menu a {
     display: block;
-    padding: 15px;
-    font-size: 1.2rem;
+    padding: 12px;
+    font-size: 1.1rem;
     border-bottom: 1px solid #333;
     font-family: var(--font-tech);
 }
@@ -165,7 +186,7 @@ header {
     background: #222;
 }
 
-/* --- Hero Section (3D Covered Poster Slider ដូចក្នុងរូបភាព) --- */
+/* --- Hero Section --- */
 .hero-carousel-container {
     position: relative;
     width: 100%;
@@ -202,7 +223,6 @@ header {
     pointer-events: none;
 }
 
-/* Slide នៅកណ្តាល (Active Slide) */
 .carousel-slide.active {
     opacity: 1;
     transform: scale(1) translateX(0);
@@ -211,7 +231,6 @@ header {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
 }
 
-/* Slide ខាងឆ្វេង (Previous) */
 .carousel-slide.prev {
     opacity: 0.45;
     transform: scale(0.85) translateX(-45%);
@@ -219,7 +238,6 @@ header {
     filter: brightness(0.6);
 }
 
-/* Slide ខាងស្តាំ (Next) */
 .carousel-slide.next {
     opacity: 0.45;
     transform: scale(0.85) translateX(45%);
@@ -227,7 +245,6 @@ header {
     filter: brightness(0.6);
 }
 
-/* ប៊ូតុងរំកិលរូបភាព (Arrow Buttons ដូចក្នុងរូប) */
 .carousel-nav-btn {
     position: absolute;
     top: 50%;
@@ -252,37 +269,8 @@ header {
     transform: translateY(-50%) scale(1.1);
 }
 
-/* ទីតាំងប៊ូតុងឆ្វេង និងស្តាំ */
 .carousel-nav-btn.prev-btn { left: 16%; }
 .carousel-nav-btn.next-btn { right: 16%; }
-
-/* Responsive សម្រាប់ទូរស័ព្ទដៃ (Mobile Phone) */
-@media (max-width: 768px) {
-    .hero-carousel-container {
-        margin-top: 80px;
-    }
-    .carousel-track-wrapper {
-        height: 180px;
-    }
-    .carousel-slide {
-        width: 82%;
-    }
-    .carousel-slide.prev {
-        transform: scale(0.88) translateX(-20%);
-        opacity: 0.3;
-    }
-    .carousel-slide.next {
-        transform: scale(0.88) translateX(20%);
-        opacity: 0.3;
-    }
-    .carousel-nav-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 0.75rem;
-    }
-    .carousel-nav-btn.prev-btn { left: 2%; }
-    .carousel-nav-btn.next-btn { right: 2%; }
-}
 
 /* --- Game Grid Section --- */
 .games-section {
@@ -295,7 +283,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     position: relative;
 }
 
@@ -526,15 +514,85 @@ footer {
     opacity: 1;
 }
 
+/* --- Mobile Device Responsive Improvements --- */
 @media (max-width: 768px) {
-    .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    header {
+        padding: 0 15px;
     }
+
+    .brand-logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-text {
+        font-size: 1.15rem;
+    }
+
     .mobile-search-trigger {
         display: block;
         color: white;
         font-size: 1.2rem;
+    }
+
+    .hero-carousel-container {
+        margin-top: 80px;
+        padding: 0 5px;
+    }
+
+    .carousel-track-wrapper {
+        height: 190px;
+    }
+
+    .carousel-slide {
+        width: 84%;
+    }
+
+    .carousel-slide.prev {
+        transform: scale(0.85) translateX(-18%);
+        opacity: 0.25;
+    }
+
+    .carousel-slide.next {
+        transform: scale(0.85) translateX(18%);
+        opacity: 0.25;
+    }
+
+    .carousel-nav-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.8rem;
+    }
+
+    .carousel-nav-btn.prev-btn { left: 2%; }
+    .carousel-nav-btn.next-btn { right: 2%; }
+
+    .games-section {
+        padding: 20px 12px 40px;
+    }
+
+    .games-grid {
+        gap: 12px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .game-title {
+        font-size: 0.8rem;
+    }
+
+    .discount-badge {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+
+    footer {
+        padding: 40px 15px 20px;
+    }
+
+    .footer-content {
+        gap: 25px;
     }
 }
